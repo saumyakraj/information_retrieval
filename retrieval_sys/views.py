@@ -46,9 +46,9 @@ def upload_image(request):
             for file in os.listdir(img_dir):
                 if (name == file):
                     list.append(os.path.join(img_dir, file))
-        # print("#####################")
-        # print(list)
-        return render(request, 'result.html', {'list': list})
+        print("#####################")
+        print(list)
+        return render(request, 'result.html', {'list0': list})
     return render(request, 'home.html')
 
 
