@@ -12,13 +12,7 @@
 <link rel="stylesheet" href="css/iconic-bootstrap.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<head>
-    
-    
-    
-    
-    
-            
+<head>     
     
   <title>Content Based Image Retreival</title>
   <style type="text/css">
@@ -73,41 +67,6 @@
      <button type="button" id="imagebtn" class="btn btn-primary" data-toggle="modal" data-target="#imagemodal"  >
         IMAGE SEARCH
       </button>      
-  
-      <button type="button" id="textbtn" class="btn btn-primary" data-toggle="modal" data-target="#textmodal"  >
-          TEXT SEARCH
-        </button>
-
-     <div class="modal fade bd-example-modal-lg" id="textmodal" tabindex="-1" role="dialog"   >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">TEXT SEARCH</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form action="search.php" method="post" enctype="multipart/form-data">
-                <div class="input-group">
-                  <input type="text" class="form-control" name="searchterm" placeholder="Search Query" required>
-                  <div class="input-group-append" id="button-addon">
-                    <button class="btn btn-outline-secondary" id="submit2" type="submit" name="submit2" onclick="myFunction()">Search</button>
-                    
-                  </div>
-                </div>
-             </form>
-            </div>
-          </div>
-          <div class="loader" id="myDIV1" style="display:none;margin-top:50px;margin-left:auto;margin-right: auto"></div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
 
 
 
@@ -174,10 +133,10 @@ function myFunction2() {
 
 
 </body>
-<footer style="margin-top: 250px">
+<footer style="margin-top: 200px">
 	<h4>Collaborators</h4>
 	<hr>
-	Abhinav Dixit &nbsp; Ishaan Rajput &nbsp; Abhishek Sharma &nbsp; Harshita Rastogi &nbsp; John Prasad
+	Abhishek Kumar &nbsp; Abhishek Kumar Sah &nbsp; Arpit Das &nbsp; Saumyak Raj &nbsp;
 
 
 </footer>
