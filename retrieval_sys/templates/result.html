@@ -1,3 +1,4 @@
+{% load static %}
 <html>
 
 <head>
@@ -5,6 +6,7 @@
 </head>
 
 <body>
+    
     <!-- Page Content -->
     <div class="container">
 
@@ -15,17 +17,15 @@
         <div class="row text-center text-lg-start">
 
             {% for data in list0 %}
-            <!-- {% for x in data %} -->
-        <h6 class="fw-light text-center text-lg-start mt-4 mb-0">{{data}}</h6>
+            
+        <h6 class="fw-light text-center text-lg-start mt-4 mb-0">{{ data }}</h6>
         
-
-
             <div class="col-lg-3 col-md-4 col-6">
                 <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src={{data}} alt="" align="middle">
+                    <img class="img-fluid img-thumbnail" src="{{ data }}" alt="">
                 </a>
             </div>
-            <!-- {% endfor %} -->
+            
             {% endfor %}
 
         </div>
