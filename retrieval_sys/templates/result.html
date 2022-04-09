@@ -16,13 +16,14 @@
 
         <div class="row text-center text-lg-start">
 
-            {% for data in list0 %}
+            {% for item in lis %}
             
-        <h6 class="fw-light text-center text-lg-start mt-4 mb-0">{{ data }}</h6>
+        <h6 class="fw-light text-center text-lg-start mt-4 mb-0">{{ item.1 }}</h6>
         
             <div class="col-lg-3 col-md-4 col-6">
                 <a href="#" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="../static/imgs/{{data}}" alt="">
+                    {{ data.1 }}
+                    <img class="img-fluid img-thumbnail" src="../static/Images/{{ item.1 }}" alt="">
                 </a>
             </div>
             
