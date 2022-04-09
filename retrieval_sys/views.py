@@ -13,14 +13,7 @@ import pandas as pd
 # img_search = None
 
 def upload_image(request):
-    # global img_search
-    # if img_search == None:
-    #     img_search = ImageSearch()
-    for root, dirs, files in os.walk('media/'):
-        for f in files:
-            os.unlink(os.path.join(root, f))
-        for d in dirs:
-            shutil.rmtree(os.path.join(root, d))
+
     if request.method == 'POST':
         upload = request.FILES['upload']
         fss = FileSystemStorage()
@@ -33,6 +26,8 @@ def upload_image(request):
             ct = df.loc[df['image'] == i[1]].iloc[0]['caption']
             lis.append([i[0], i[1], ct])
 
-        context = {'lis':lis, 'search_time':time.time() - start}
+        shutil.move(os.path.join("media" , file), os.path.join(r"C:\Users\abhis\Desktop\IR\information_retrieval\retrieval_sys\static",file))
+
+        context = {'lis':lis, 'query_image':file, 'search_time':time.time() - start}
         return render(request, 'result.html', context)
     return render(request, 'home.html')
