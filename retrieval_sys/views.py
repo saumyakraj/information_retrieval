@@ -32,10 +32,10 @@ def upload_image(request):
 
         file_url = fss.url(file)
         # data = IMG_SEARCH.search_images(os.path.join("media" , file))
-        data = [(0.9,'1.png'), (0.8,'2.png'), (0.7,'4.png')]
-        context = {'lis':data}
+        data = [[0.9,'1.png', "cap1"], [0.8,'2.png', "cap2"], [0.7,'4.png', "cap4"]]
+        context = {'lis':data, 'search_time':5}
 
-        # start = time.time()
+        start = time.time()
         # data = IMG_SEARCH.search_images(os.path.join("media" , file), 'inceptionresnetv2', 15)
         # df = pd.read_csv(os.path.join('Data', 'captions.txt'))
         # lis = []
