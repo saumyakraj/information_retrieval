@@ -9,18 +9,23 @@ import os
 import time
 from IR_Project.settings import IMG_SEARCH
 import pandas as pd
-
+from .forms import ImageForm
 
 def upload_image(request):
 
     if request.method == 'POST':
         upload = request.FILES['upload']
         model = request.POST['model']
+        dict = {'1': 'vgg19',
+                '2': 'vgg16',
+                '3': 'resnet',
+                '4': 'inceptionresnetv2'}
+
         fss = FileSystemStorage()
         file = fss.save(upload.name, upload)
 
         start = time.time()
-        data = IMG_SEARCH.search_images(os.path.join("media" , file), 'inceptionresnetv2', 15)
+        data = IMG_SEARCH.search_images(os.path.join("media" , file), dict[model], int(request.POST['num_of_images']))
         df = pd.read_csv(os.path.join('Data', 'captions.txt'))
         lis = []
         for i in data:
